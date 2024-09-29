@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  /* form  */
+  /* -------------------- */
+
+  .error-text {
+    @apply text-red-400 font-bold text-[0.75rem] pl-3 p-1;
+  }
+
+  .input {
+    @apply block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-inset ring-gray-300 pl-3 dark:text-neutral-400 dark:ring-neutral-700;
+  }
+
+  .input:focus {
+    @apply ring-2 ring-inset ring-violet-600 outline-none
+  }
+
+  .input-wrapper {
+    @apply relative flex flex-col h-auto;
+  }
+
+  .label {
+    @apply block text-sm font-medium leading-6 mb-2;
+  }
+
+  /* editor */
+  /* -------------------- */
+
+  .editorjs-wrapper .ce-header {
+    @apply font-semibold
+  }
+
+  .editorjs-wrapper h2 {
+    @apply text-2xl
+  }
+
+  .editorjs-wrapper h3 {
+    @apply text-xl
+  }
+
+  .editorjs-wrapper h4 {
+    @apply text-base
+  }
+
+  .editorjs-wrapper h5 {
+    @apply text-sm
+  }
+
+  .editorjs-wrapper p {
+    @apply text-lg
+  }
+ 
+  .editorjs-wrapper-renderer p {
+    @apply text-lg dark:text-[#b9b8b8] text-[#2f2f2f]
+  }
+
+  .editorjs-wrapper-renderer h2 {
+    @apply dark:text-[#c9c9c9] text-[#3c3c3c]
+  }
+
+  .editorjs-wrapper-renderer h3 {
+    @apply dark:text-[#c9c9c9] text-[#3c3c3c]
+  }
+
+  .editorjs-wrapper-renderer h4 {
+    @apply dark:text-[#c9c9c9] text-[#3c3c3c]
+  }
+
+  .editorjs-wrapper-renderer h5 {
+    @apply dark:text-[#c9c9c9] text-[#3c3c3c]
+  }
+
+  .editorjs-wrapper-renderer a {
+    @apply text-violet-600 underline dark:text-violet-400/90
+  }
+
+  .editorjs-wrapper-renderer mark {
+    @apply bg-violet-600/20 dark:bg-violet-500/50 dark:text-[#e2e1e1]
+  }
+
+  .editorjs-wrapper-renderer ul {
+    @apply !list-disc
+  }
+
+  .editorjs-wrapper-renderer ol {
+    @apply !list-decimal
+  }
+  .editorjs-wrapper-renderer li {
+    @apply dark:text-[#b9b8b8] text-[#616060]
+  }
+
+  /* applause button  */
+  /* -------------------- */
+
+  .outer-container {
+    @apply flex justify-center items-center;
+  }
+
+  .applause-button {
+    @apply border-none bg-none flex items-center cursor-pointer gap-2 relative outline-none text-black;
+  }
+
+  .applause-button:disabled {
+    @apply cursor-default;
+  }
+
+  .applause-button .hands {
+    @apply transition-transform ease-linear fill-current duration-[250ms];
+    ;
+  }
+
+  .applause-button.clicked .hands {
+    @apply transform scale-[1.15] text-violet-800;
+  }
+
+  .applause-button.clicked .spark {
+    animation: spark 0.25s ease-in-out forwards;
+  }
+
+  .spark-container {
+    @apply absolute left-[-10px] top-[-15px] z-10 ;
+  }
+
+  .spark-container.left {
+    @apply -rotate-[20deg];
+    ;
+  }
+
+  .spark-container.right {
+    @apply rotate-[20deg];
+  }
+
+  .spark-container .spark {
+    @apply opacity-0 invisible transform scale-[0.4];
+  }
+
+  @keyframes spark {
+    20% {
+      @apply opacity-100 visible;
+    }
+
+    70% {
+      @apply opacity-100;
+    }
+
+    100% {
+      @apply opacity-0 transform scale-[1.4];
+    }
+  }
+
+  .applause-button.active .counter {
+    @apply invisible;
+  }
+
+  .applause-button.interacted.inactive .bubble {
+    animation: bubble 0.95s ease-in-out forwards;
+  }
+
+  .applause-button.active .bubble,
+  .applause-button.clicked .bubble {
+    @apply opacity-100 visible;
+  }
+
+  .applause-button.active .bubble {
+    @apply transform translate-y-[-40px];
+  }
+
+  .applause-button.clicked .bubble {
+    @apply transform translate-y-[-40px] scale-[1.05];
+  }
+
+  .bubble {
+    @apply opacity-0 invisible absolute left-[-3px] h-8 w-8 flex justify-center items-center bg-black text-white p-2 rounded-full transform translate-y-[-30px] transition-transform ease-in-out duration-100 text-[12px] font-sans font-semibold dark:bg-violet-800/80 dark:text-neutral-400;
+  }
+
+  @keyframes bubble {
+    0% {
+      opacity: 1;
+      transform: translateY(-40px);
+      visibility: visible
+    }
+
+    60% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+  }
+
+  /* sort by button */
+  /* -------------------- */
+
+  .clip-half-right {
+    @apply absolute top-0 left-0;
+    clip-path: inset(0 0 0 50%);
+  }
+
+  .clip-half-left {
+    @apply absolute top-0 left-0;
+    clip-path: inset(0 50% 0 0);
+  }
+
+  /* back to top */
+  /* -------------------- */
+
+  @keyframes bounce-up {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    50% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(-40px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes bounce-down {
+    0% {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+
+    50% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .group:hover .group-hover\:animate-bounce-up {
+    animation: bounce-up 600ms forwards;
+  }
+
+  .group:hover .group-hover\:animate-bounce-down {
+    animation: bounce-down 600ms forwards;
+  }
+
+}
