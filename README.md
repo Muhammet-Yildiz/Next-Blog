@@ -23,7 +23,7 @@
      <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="mongodb" />
       <br/> <br/>
       
-  ![website status](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https://next-blog-2025.vercel.app&style=flat-square) ![GitHub](https://img.shields.io/github/license/Muhammet-Yildiz/Next-Blog?style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/Muhammet-Yildiz/Next-Blog?style=flat-square) ![GitHub repo size](https://img.shields.io/github/repo-size/Muhammet-Yildiz/Next-Blog?style=flat-square) ![GitHub top language](https://img.shields.io/github/languages/top/Muhammet-Yildiz/Next-Blog?style=flat-square)
+  ![website status](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https://next-blog-2025.vercel.app&style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/Muhammet-Yildiz/Next-Blog?style=flat-square) ![GitHub repo size](https://img.shields.io/github/repo-size/Muhammet-Yildiz/Next-Blog?style=flat-square) ![GitHub top language](https://img.shields.io/github/languages/top/Muhammet-Yildiz/Next-Blog?style=flat-square)
     
   </div>
 
