@@ -420,7 +420,7 @@ All the endpoints are listed below.
 
 ## <a name="repo-activity">📈 Repo Activity</a>
 
-
+![Alt](https://repobeats.axiom.co/api/embed/b5f7bcae18dba320e64581e0c15330ad561bfdec.svg "Repobeats analytics image")
 
 
 ## <a name="lighthouse-score">📊 Lighthouse Score</a>
